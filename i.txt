@@ -1,0 +1,2 @@
+npm install mongoose framer-motion react-redux react-hot-toast
+npm install next-auth react-icons @reduxjs/toolkit
