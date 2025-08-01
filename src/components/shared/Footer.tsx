@@ -14,13 +14,13 @@ export function Footer() {
           <div className="flex items-center gap-4 mb-2 ">
             <Link href="/" className="flex items-center gap-2">
               {/* Logo Image */}
-              <Image
+              {/* <Image
                 src="/images/bglogo.png"
                 alt="Logo"
                 width={40}
                 height={40}
                 className="rounded"
-              />
+              /> */}
 
               {/* Title and Badge */}
               <span className="text-xl font-bold text-gray-900">eshop</span>
