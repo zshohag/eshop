@@ -119,7 +119,7 @@ export default function AddProductPage() {
   const [currentFeatureInput, setCurrentFeatureInput] = useState<string>("");
 
   // Watch for name changes to auto-generate slug
-  const watchedName = form.watch("name");
+  //const watchedName = form.watch("name");
   
   // Auto-generate slug when name changes
   const handleNameChange = (value: string) => {
