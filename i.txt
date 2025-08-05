@@ -2,3 +2,31 @@ npm install mongoose framer-motion react-redux react-hot-toast
 npm install next-auth react-icons @reduxjs/toolkit
 
 npm install @hookform/resolvers zod
+
+
+
+npm i @stripe/react-stripe-js @stripe/stripe-js nodemailer 
+
+
+npm i @types/googlepay @types/mongoose @types/node @types/nodemailer @types/stripe @types/uuid
+
+
+
+npm i @types/mongoose @types/node @types/nodemailer @types/uuid
+
+
+
+
+
+npm install \
+@stripe/react-stripe-js@3.7.0 \
+@stripe/stripe-js@7.5.0 \
+nodemailer@6.9.8
+
+npm install -D \
+@types/googlepay@0.7.6 \
+@types/mongoose@5.11.96 \
+@types/node@20.19.7 \
+@types/nodemailer@6.4.17 \
+@types/stripe@8.0.416 \
+@types/uuid@10.0.0

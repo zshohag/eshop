@@ -1,25 +1,25 @@
-// src/app/api/products/[id]/route.ts
+// src/app/api/products/slug/[slug]/route.ts
 import { connectMongoDB } from "@/lib/mongodb";
 import Product from "@/models/Product";
 import { NextResponse } from "next/server";
 
 export async function GET(
   req: Request,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
-    const { id } = await params;
-    console.log("Received ID:", id);
+    const { slug } = await params;
+    console.log("Received slug:", slug);
 
     await connectMongoDB();
     console.log("✅ Connected to MongoDB");
 
-    // Since your model uses a custom 'id' field (not _id), search by that field
-    const product = await Product.findOne({ id: id });
+    // Search by slug field
+    const product = await Product.findOne({ slug: slug });
     console.log("Product found:", !!product);
 
     if (!product) {
-      console.log("Product not found for ID:", id);
+      console.log("Product not found for slug:", slug);
       return NextResponse.json(
         { message: "Product not found" },
         { status: 404 }
@@ -39,24 +39,25 @@ export async function GET(
     );
   }
 }
+
 export async function PUT(
   req: Request,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
-    const { id } = await params;
+    const { slug } = await params;
     const body = await req.json();
 
-    console.log("PUT request received for ID:", id);
+    console.log("PUT request received for slug:", slug);
     console.log("Request body:", JSON.stringify(body, null, 2));
 
     await connectMongoDB();
     console.log("✅ Connected to MongoDB");
 
     // Find the existing product first
-    const existingProduct = await Product.findOne({ id: id });
+    const existingProduct = await Product.findOne({ slug: slug });
     if (!existingProduct) {
-      console.log("❌ Product not found for ID:", id);
+      console.log("❌ Product not found for slug:", slug);
       return NextResponse.json(
         { message: "Product not found" },
         { status: 404 }
@@ -66,10 +67,14 @@ export async function PUT(
     console.log("✅ Found existing product:", existingProduct.name);
 
     // Update the product
-    const updatedProduct = await Product.findOneAndUpdate({ id: id }, body, {
-      new: true,
-      runValidators: true, // This ensures schema validation runs
-    });
+    const updatedProduct = await Product.findOneAndUpdate(
+      { slug: slug },
+      body,
+      {
+        new: true,
+        runValidators: true, // This ensures schema validation runs
+      }
+    );
 
     if (!updatedProduct) {
       console.log("❌ Update failed - product not found");
@@ -104,14 +109,14 @@ export async function PUT(
 
 export async function DELETE(
   req: Request,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
-    const { id } = await params;
+    const { slug } = await params;
 
     await connectMongoDB();
 
-    const deletedProduct = await Product.findOneAndDelete({ id: id });
+    const deletedProduct = await Product.findOneAndDelete({ slug: slug });
 
     if (!deletedProduct) {
       return NextResponse.json(

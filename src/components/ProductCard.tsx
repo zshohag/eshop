@@ -91,7 +91,7 @@ export function ProductCard({ product, onViewDetails }: ProductCardProps) {
             </h3>
           </div>
 
-          <div className="flex items-center gap-1 mb-2">
+          {/* <div className="flex items-center gap-1 mb-2">
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
@@ -105,7 +105,7 @@ export function ProductCard({ product, onViewDetails }: ProductCardProps) {
             <span className="text-sm text-gray-600 ml-1">
               ({product.reviews})
             </span>
-          </div>
+          </div> */}
 
           <p className="text-gray-600 text-sm mb-3 line-clamp-2">
             {product.description}
@@ -160,7 +160,7 @@ export function ProductCard({ product, onViewDetails }: ProductCardProps) {
           </Button>
         </div>
 
-        <Link href={`/products/${product.id}`} className="w-full">
+        <Link href={`/products/${product.slug}`} className="w-full">
           <Button variant="secondary" className="w-full">
             View More
           </Button>

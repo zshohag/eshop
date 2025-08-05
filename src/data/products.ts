@@ -7,6 +7,7 @@ export const products: Product[] = [
   {
     id: "1",
     name: "Vitamin C Serum",
+    slug: "vitamin-c-serum",
     price: 29.99,
     images: [
       "https://s.alicdn.com/@sc04/kf/A971c45c7a7d446bf96511641445c5db7O.jpg_720x720q50.jpg",
@@ -31,6 +32,7 @@ export const products: Product[] = [
   {
     id: "2",
     name: "Herbal Hair Shampoo",
+    slug: "herbal-hair-shampoo",
     price: 18.5,
     images: [
       "https://s.alicdn.com/@sc04/kf/H1941ee79b0934c7997a561e9a606fde53.jpg_720x720q50.jpg",
@@ -55,6 +57,7 @@ export const products: Product[] = [
   {
     id: "3",
     name: "Electric Toothbrush",
+    slug: "electric-toothbrush",
     price: 49.99,
     images: [
       "https://i.ibb.co/7xmZrD0x/Electric-Toothbrush1.jpg",
@@ -80,6 +83,7 @@ export const products: Product[] = [
   {
     id: "55",
     name: "Hydrating Facial Moisturizer",
+    slug: "hydrating-facial-moisturizer",
     price: 24.99,
     images: [
       "https://i.ibb.co/xyz1/moisturizer1.jpg",
@@ -105,6 +109,7 @@ export const products: Product[] = [
   {
     id: "5",
     name: "Essential Oils Set",
+    slug: "essential-oils-set",
     price: 35.0,
     images: [
       "https://s.alicdn.com/@sc04/kf/Hdc201c3cd20f4359914b96991b523f8fW.jpg_720x720q50.jpg",
@@ -128,6 +133,7 @@ export const products: Product[] = [
   {
     id: "6",
     name: "Hair Dryer",
+    slug: "hair-dryer",
     price: 59.99,
     images: [
       "https://i.ibb.co/BkdPHMV/Hair-Dryer1.png",
@@ -152,6 +158,7 @@ export const products: Product[] = [
   {
     id: "7",
     name: "Nail Kit",
+    slug: "nail-kit",
     price: 22.49,
     images: [
       "https://i.ibb.co/6c5thL78/Nail-Kit1.jpg",
@@ -176,6 +183,7 @@ export const products: Product[] = [
   {
     id: "8",
     name: "Lip Balm",
+    slug: "lip-balm",
     price: 5.99,
     images: [
       "https://i.ibb.co/7JphgJDG/Lip-Balm1.jpg",
@@ -201,6 +209,7 @@ export const products: Product[] = [
   {
     id: "4",
     name: "Face Moisturizer",
+    slug: "face-moisturizer",
     price: 24.75,
     images: [
       "/placeholder.svg?height=400&width=400&text=Embroidery+Hoops",
@@ -224,6 +233,7 @@ export const products: Product[] = [
   {
     id: "9",
     name: "Facial Cleanser",
+    slug: "facial-cleanser",
     price: 19.95,
     images: [
       "https://i.ibb.co/9HZ87D0Q/Facial-Cleanser1.jpg",
@@ -248,6 +258,7 @@ export const products: Product[] = [
   {
     id: "10",
     name: "Body Scrub",
+    slug: "body-scrub",
     price: 24.99,
     images: [
       "/images/Body Scrub1.jpg",
@@ -274,6 +285,7 @@ export const products: Product[] = [
   {
     id: "11",
     name: "Baby Diapers",
+    slug: "baby-diapers",
     price: 39.99,
     images: [
       "https://i.ibb.co/2YZZtgT8/Baby-Diapers1.jpg",
@@ -298,6 +310,7 @@ export const products: Product[] = [
   {
     id: "12",
     name: "Infant Formula",
+    slug: "infant-formula",
     price: 49.5,
     images: [
       "https://i.ibb.co/3mWgTpVc/Infant-Formula1.jpg",
@@ -322,6 +335,7 @@ export const products: Product[] = [
   {
     id: "13",
     name: "Baby Stroller",
+    slug: "baby-stroller",
     price: 129.99,
     images: [
       "/placeholder.svg?height=400&width=400&text=Embroidery+Hoops",
@@ -345,6 +359,7 @@ export const products: Product[] = [
   {
     id: "14",
     name: "Baby Lotion",
+    slug: "baby-lotion",
     price: 12.99,
     images: [
       "https://i.ibb.co/wFSbrR3m/Baby-Lotion1.jpg",
@@ -369,6 +384,7 @@ export const products: Product[] = [
   {
     id: "56",
     name: "Adjustable Baby Bottle Warmer",
+    slug: "adjustable-baby-bottle-warmer",
     price: 39.99,
     images: [
       "https://i.ibb.co/abc1/bottlewarmer1.jpg",
@@ -394,6 +410,7 @@ export const products: Product[] = [
   {
     id: "15",
     name: "Teething Toys Set",
+    slug: "teething-toys-set",
     price: 16.5,
     images: [
       "https://i.ibb.co/LzD9h6Mc/Teething-Toys-Set1.jpg",
@@ -418,6 +435,7 @@ export const products: Product[] = [
   {
     id: "16",
     name: "Crib Mobile",
+    slug: "crib-mobile",
     price: 29.95,
     images: [
       "https://i.ibb.co/fzqt5mFw/Crib-Mobile1.jpg",
@@ -442,6 +460,7 @@ export const products: Product[] = [
   {
     id: "17",
     name: "Soft Baby Blanket",
+    slug: "soft-baby-blanket",
     price: 24.99,
     images: [
       "https://i.ibb.co/cXZd3vft/Soft-Baby-Blanket1.png",
@@ -466,6 +485,7 @@ export const products: Product[] = [
   {
     id: "18",
     name: "Baby Monitor",
+    slug: "baby-monitor",
     price: 59.99,
     images: [],
     category: "baby",
@@ -488,6 +508,7 @@ export const products: Product[] = [
   {
     id: "19",
     name: "Stainless Steel Chef Knife",
+    slug: "stainless-steel-chef-knife",
     price: 45.99,
     images: [
       "/images/Stainless Steel Chef Knife1.png",
@@ -512,6 +533,7 @@ export const products: Product[] = [
   {
     id: "20",
     name: 'Cast Iron Skillet 10"',
+    slug: "cast-iron-skillet-10",
     price: 39.99,
     images: [
       "https://i.ibb.co/VYm6RLLw/Cast-Iron-Skillet1.jpg",
@@ -536,6 +558,7 @@ export const products: Product[] = [
   {
     id: "21",
     name: "Ceramic Dinnerware Set",
+    slug: "ceramic-dinnerware-set",
     price: 89.99,
     images: [
       "https://i.ibb.co/XrkDsKw3/Ceramic-Dinnerware-Set1.jpg",
@@ -560,6 +583,7 @@ export const products: Product[] = [
   {
     id: "22",
     name: "Blender with Glass Jar",
+    slug: "blender-with-glass-jar",
     price: 79.99,
     images: [
       "https://i.ibb.co/C5FX9SSc/Blender-with-Glass-Jar1.jpg",
@@ -584,6 +608,7 @@ export const products: Product[] = [
   {
     id: "23",
     name: "Bamboo Cutting Board Set",
+    slug: "bamboo-cutting-board-set",
     price: 34.99,
     images: [
       "https://i.ibb.co/0yc6BnZM/Bamboo-Cutting-Board-Set1.jpg",
@@ -608,6 +633,7 @@ export const products: Product[] = [
   {
     id: "24",
     name: "Stainless Steel Cookware Set",
+    slug: "stainless-steel-cookware-set",
     price: 149.99,
     images: [
       "/placeholder.svg?height=400&width=400&text=Embroidery+Hoops",
@@ -631,6 +657,7 @@ export const products: Product[] = [
   {
     id: "25",
     name: "Coffee Maker with Timer",
+    slug: "coffee-maker-with-timer",
     price: 69.99,
     images: [
       "https://i.ibb.co/FqVZ809q/Coffee-Maker-with-Timer1.png",
@@ -655,6 +682,7 @@ export const products: Product[] = [
   {
     id: "26",
     name: "Silicone Baking Mat Set",
+    slug: "silicone-baking-mat-set",
     price: 19.99,
     images: [
       "https://i.ibb.co/gFydWQY9/Silicone-Baking-Mat-Set1.jpg",
@@ -681,6 +709,7 @@ export const products: Product[] = [
   {
     id: "27",
     name: "Organic Coffee Beans",
+    slug: "organic-coffee-beans",
     price: 19.99,
     images: [
       "https://i.ibb.co/p6MDnTrS/Organic-Fair-Trade-Coffee-Beans1.jpg",
@@ -705,6 +734,7 @@ export const products: Product[] = [
   {
     id: "28",
     name: "Organic Honey 500g",
+    slug: "organic-honey-500g",
     price: 12.99,
     images: [
       "https://i.ibb.co/9m4zRbDD/Organic-Honey1.jpg",
@@ -729,6 +759,7 @@ export const products: Product[] = [
   {
     id: "29",
     name: "Quinoa Grain",
+    slug: "quinoa-grain",
     price: 8.99,
     images: [
       "https://i.ibb.co/JFH2X5qP/Quinoa-Grain1.jpg",
@@ -753,6 +784,7 @@ export const products: Product[] = [
   {
     id: "30",
     name: "Olive Oil",
+    slug: "olive-oil",
     price: 16.99,
     images: [
       "https://i.ibb.co/tTbVrHcG/Extra-Virgin-Olive-Oil1.jpg",
@@ -775,9 +807,11 @@ export const products: Product[] = [
     inStock: true,
     badge: "Premium Quality",
   },
+
   {
     id: "31",
     name: "Himalayan Pink Salt",
+    slug: "himalayan-pink-salt",
     price: 9.99,
     images: [
       "https://i.ibb.co/BVq2LJKS/Himalayan-Pink-Salt1.jpg",
@@ -802,6 +836,7 @@ export const products: Product[] = [
   {
     id: "32",
     name: "Organic Green Tea",
+    slug: "organic-green-tea",
     price: 14.99,
     images: [],
     category: "grocery",
@@ -822,6 +857,7 @@ export const products: Product[] = [
   {
     id: "33",
     name: "Almond Butter",
+    slug: "almond-butter",
     price: 11.99,
     images: [
       "https://i.ibb.co/LhJ8WqdJ/Almond-Butter1.jpg",
@@ -846,6 +882,7 @@ export const products: Product[] = [
   {
     id: "34",
     name: "Coconut Oil",
+    slug: "coconut-oil",
     price: 13.99,
     images: [
       "https://i.ibb.co/5hZJzrnW/Coconut-Oil1.jpg",
@@ -867,11 +904,10 @@ export const products: Product[] = [
     inStock: true,
     badge: "Multi-Use",
   },
-
-  // Art & Craft (8 products)
   {
     id: "35",
     name: "12-Color Acrylic Paint Set",
+    slug: "12-color-acrylic-paint-set",
     price: 24.49,
     images: [
       "https://i.ibb.co/gLQMQtK4/12-Color-Acrylic-Paint-Set1.png",
@@ -896,6 +932,7 @@ export const products: Product[] = [
   {
     id: "36",
     name: "Professional Brush Set",
+    slug: "professional-brush-set",
     price: 18.99,
     images: [
       "https://i.ibb.co/77jggpb/Professional-Brush-Set1.jpg",
@@ -920,6 +957,7 @@ export const products: Product[] = [
   {
     id: "37",
     name: "Watercolor Paper Pad A4",
+    slug: "watercolor-paper-pad-a4",
     price: 12.99,
     images: [
       "https://i.ibb.co/jP6Yx298/Watercolor-Paper-Pad1.png",
@@ -944,6 +982,7 @@ export const products: Product[] = [
   {
     id: "38",
     name: "Colored Pencil Set 72 Colors",
+    slug: "colored-pencil-set-72-colors",
     price: 29.99,
     images: [
       "https://i.ibb.co/Q7G72K1Q/Colored-Pencil-Set-72-Colors1.jpg",
@@ -968,6 +1007,7 @@ export const products: Product[] = [
   {
     id: "39",
     name: "Canvas Boards",
+    slug: "canvas-boards",
     price: 15.99,
     images: [
       "https://i.ibb.co/TxPyht35/Canvas-Boards-8x10-Pack-of-101.jpg",
@@ -992,6 +1032,7 @@ export const products: Product[] = [
   {
     id: "40",
     name: "Craft Scissors Set",
+    slug: "craft-scissors-set",
     price: 16.99,
     images: [
       "/placeholder.svg?height=400&width=400&text=Embroidery+Hoops",
@@ -1015,6 +1056,7 @@ export const products: Product[] = [
   {
     id: "59",
     name: "Watercolor Paint Set",
+    slug: "watercolor-paint-set",
     price: 19.95,
     images: [
       "https://i.ibb.co/jkl1/paintset1.jpg",
@@ -1040,6 +1082,7 @@ export const products: Product[] = [
   {
     id: "41",
     name: "Polymer Clay Starter Kit",
+    slug: "polymer-clay-starter-kit",
     price: 22.99,
     images: [
       "https://i.ibb.co/PZJ6fC7G/Polymer-Clay-Starter-Kit1.jpg",
@@ -1064,6 +1107,7 @@ export const products: Product[] = [
   {
     id: "42",
     name: "Embroidery Hoop Set",
+    slug: "embroidery-hoop-set",
     price: 13.99,
     images: [
       "https://i.ibb.co/7d9nHH0F/Embroidery-Hoop-Set1.jpg",
@@ -1085,10 +1129,10 @@ export const products: Product[] = [
     inStock: true,
     badge: "Eco-Friendly",
   },
-
   {
     id: "43",
     name: "Milk Chocolate Almond Bar",
+    slug: "milk-chocolate-almond-bar",
     price: 8.49,
     images: [
       "https://i.ibb.co/zhKzYpr6/Milk1.jpg",
@@ -1113,6 +1157,7 @@ export const products: Product[] = [
   {
     id: "44",
     name: "White Chocolate Raspberry",
+    slug: "white-chocolate-raspberry",
     price: 12.99,
     images: [
       "https://i.ibb.co/DD4pKpYL/Raspberry1.jpg",
@@ -1137,6 +1182,7 @@ export const products: Product[] = [
   {
     id: "45",
     name: "Assorted Chocolate Pralines",
+    slug: "assorted-chocolate-pralines",
     price: 19.99,
     images: [
       "https://i.ibb.co/x9ZRv1L/Assorted1.jpg",
@@ -1162,6 +1208,7 @@ export const products: Product[] = [
   {
     id: "46",
     name: "Hazelnut Chocolate Spread",
+    slug: "hazelnut-chocolate-spread",
     price: 9.99,
     images: [
       "https://i.ibb.co/rGzRSbKD/Hazelnut1.jpg",
@@ -1187,6 +1234,7 @@ export const products: Product[] = [
   {
     id: "58",
     name: "Organic Quinoa",
+    slug: "organic-quinoa",
     price: 12.49,
     images: [
       "https://i.ibb.co/ghi1/quinoa1.jpg",
@@ -1209,10 +1257,10 @@ export const products: Product[] = [
     inStock: true,
     badge: "Coming Soon",
   },
-
   {
     id: "47",
     name: "Gummy Bears Mix",
+    slug: "gummy-bears-mix",
     price: 6.99,
     images: [
       "https://i.ibb.co/VrGrPJ4/Gummy1.jpg",
@@ -1237,6 +1285,7 @@ export const products: Product[] = [
   {
     id: "48",
     name: "Sour Lemon Drops",
+    slug: "sour-lemon-drops",
     price: 5.49,
     images: [
       "https://i.ibb.co/KxFvZd2t/Sour1.jpg",
@@ -1262,6 +1311,7 @@ export const products: Product[] = [
   {
     id: "49",
     name: "Caramel Toffee Chews",
+    slug: "caramel-toffee-chews",
     price: 7.99,
     images: [
       "https://i.ibb.co/SXb0Bcbm/Caramel1.jpg",
@@ -1286,6 +1336,7 @@ export const products: Product[] = [
   {
     id: "50",
     name: "Ceramic Planter Set",
+    slug: "ceramic-planter-set",
     price: 49.99,
     images: [
       "https://i.ibb.co/KzsvHgrR/Ceramic1.jpg",
@@ -1308,10 +1359,10 @@ export const products: Product[] = [
     inStock: true,
     badge: "Stylish Pick",
   },
-
   {
     id: "51",
     name: "Terracotta Pot Trio",
+    slug: "terracotta-pot-trio",
     price: 39.99,
     images: [
       "https://i.ibb.co/wr077CVX/Terracotta1.jpg",
@@ -1337,6 +1388,7 @@ export const products: Product[] = [
   {
     id: "52",
     name: "Ceramic Hanging Planter",
+    slug: "ceramic-hanging-planter",
     price: 24.99,
     images: [
       "https://i.ibb.co/kgxcPzM1/Glazed1.jpg",
@@ -1362,6 +1414,7 @@ export const products: Product[] = [
   {
     id: "53",
     name: "Wooden Planter Box",
+    slug: "wooden-planter-box",
     price: 59.99,
     images: [
       "https://i.ibb.co/spXK3ZYG/Wooden2.jpg",
@@ -1387,6 +1440,7 @@ export const products: Product[] = [
   {
     id: "54",
     name: "Metal Wall Planter Set",
+    slug: "metal-wall-planter-set",
     price: 34.99,
     images: [
       "https://i.ibb.co/b55BzMdn/Metal1.jpg",
@@ -1409,10 +1463,10 @@ export const products: Product[] = [
     inStock: true,
     badge: "Space-Saving",
   },
-
   {
     id: "57",
     name: "Smart Air Fryer",
+    slug: "smart-air-fryer",
     price: 89.99,
     images: [
       "https://i.ibb.co/def1/airfryer1.jpg",
@@ -1435,10 +1489,10 @@ export const products: Product[] = [
     inStock: true,
     badge: "Coming Soon",
   },
-
   {
     id: "60",
     name: "Cordless Electric Lawn Trimmer",
+    slug: "cordless-electric-lawn-trimmer",
     price: 79.99,
     images: [
       "https://i.ibb.co/mno1/trimmer1.jpg",

@@ -1,11 +1,3 @@
-// export default function AddProductPage() {
-//   return (
-//     <div>
-//       <h1 className="text-2xl font-bold">Add New Product</h1>
-//     </div>
-//   );
-// }
-
 "use client";
 
 import { useState } from "react";
@@ -15,7 +7,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "react-hot-toast";
 import Image from "next/image";
-import { Plus, X, ArrowLeft, Package, Star, Tag } from "lucide-react";
+import { Plus, X, ArrowLeft, Package, Star, Tag, Hash } from "lucide-react";
 
 import { useCreateProduct } from "@/lib/api/products";
 import { Product } from "@/types/types";
@@ -43,9 +35,21 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 
+// Helper function to generate slug from product name
+const generateSlug = (name: string): string => {
+  return name
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '') // Remove special characters
+    .replace(/[\s_-]+/g, '-') // Replace spaces and underscores with hyphens
+    .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
+};
+
 // Define the input schema
 const formSchema = z.object({
   name: z.string().min(1, "Name is required").trim(),
+  slug: z.string().min(1, "Slug is required").trim()
+    .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "Slug must be lowercase letters, numbers, and hyphens only"),
   description: z.string().optional(),
   price: z
     .string()
@@ -95,6 +99,7 @@ export default function AddProductPage() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
+      slug: "",
       description: "",
       price: "",
       quantity: "",
@@ -112,6 +117,20 @@ export default function AddProductPage() {
   const [currentImageUrlInput, setCurrentImageUrlInput] = useState<string>("");
   // State to manage individual feature input
   const [currentFeatureInput, setCurrentFeatureInput] = useState<string>("");
+
+  // Watch for name changes to auto-generate slug
+  const watchedName = form.watch("name");
+  
+  // Auto-generate slug when name changes
+  const handleNameChange = (value: string) => {
+    form.setValue("name", value);
+    if (value.trim()) {
+      const generatedSlug = generateSlug(value);
+      form.setValue("slug", generatedSlug, { shouldValidate: true });
+    } else {
+      form.setValue("slug", "");
+    }
+  };
 
   // Function to add an image URL
   const addImageUrl = () => {
@@ -184,49 +203,6 @@ export default function AddProductPage() {
     }
   };
 
-  // const onSubmit = async (values: FormValues) => {
-  //   try {
-  //     console.log("Form values before processing:", values);
-
-  //     // Validate and parse form values
-  //     const parsedValues = formSchema.parse(values);
-  //     console.log("Parsed values:", parsedValues);
-
-  //     // Generate a unique ID (you might want to let your backend handle this)
-  //     //const productId = `product_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-
-  //     const newProduct: Omit<Product, "id"> = {
-  //       name: parsedValues.name,
-  //       description: parsedValues.description || "",
-  //       price: Number(parsedValues.price),
-  //       quantity: Number(parsedValues.quantity),
-  //       category: parsedValues.category || "",
-  //       images: parsedValues.imageUrls || [],
-  //       features: parsedValues.features || [],
-  //       rating: parsedValues.rating ? Number(parsedValues.rating) : 0,
-  //       reviews: parsedValues.reviews ? Number(parsedValues.reviews) : 0,
-  //       badge: parsedValues.badge || "",
-  //       inStock: parsedValues.inStock ?? true,
-  //     };
-
-  //     console.log("Final product object to create:", newProduct);
-
-  //     const result = await createProductMutation.mutateAsync(newProduct);
-  //     console.log("Create result:", result);
-
-  //     toast.success("Product created successfully!");
-  //     router.push("/dashboard/admin/manage-products");
-  //   } catch (err) {
-  //     console.error("Form submission error:", err);
-
-  //     if (err instanceof Error) {
-  //       toast.error(`Failed to create product: ${err.message}`);
-  //     } else {
-  //       toast.error("Failed to create product");
-  //     }
-  //   }
-  // };
-  // Just the onSubmit function update for your React component
   const onSubmit = async (values: FormValues) => {
     try {
       console.log("Form values before processing:", values);
@@ -243,6 +219,7 @@ export default function AddProductPage() {
       const newProduct: Product = {
         id: productId, // Include the generated ID
         name: parsedValues.name,
+        slug: parsedValues.slug, // ✅ Include the slug
         description: parsedValues.description || "",
         price: Number(parsedValues.price),
         quantity: Number(parsedValues.quantity),
@@ -272,6 +249,7 @@ export default function AddProductPage() {
       }
     }
   };
+
   return (
     <div className="min-h-screen bg-gray-50/30 p-2">
       <div className="max-w-4xl">
@@ -287,9 +265,6 @@ export default function AddProductPage() {
           </Button>
 
           <div className="flex items-center space-x-3">
-            {/* <div className="p-2 bg-blue-100 rounded-lg">
-              <Package className="h-6 w-6 text-blue-600" />
-            </div> */}
             <div>
               <h1 className="text-3xl font-bold text-gray-900">
                 Add New Product
@@ -333,10 +308,38 @@ export default function AddProductPage() {
                             <FormControl>
                               <Input
                                 {...field}
+                                onChange={(e) => handleNameChange(e.target.value)}
                                 placeholder="Enter product name"
                                 className="h-11"
                               />
                             </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="slug"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-sm font-medium">
+                              Product Slug{" "}
+                              <span className="text-red-500">*</span>
+                            </FormLabel>
+                            <FormControl>
+                              <div className="relative">
+                                <Hash className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-500" />
+                                <Input
+                                  {...field}
+                                  placeholder="product-slug-url"
+                                  className="pl-10 h-11"
+                                />
+                              </div>
+                            </FormControl>
+                            <FormDescription>
+                              URL-friendly version of the product name. Auto-generated from the product name, but you can customize it.
+                            </FormDescription>
                             <FormMessage />
                           </FormItem>
                         )}
