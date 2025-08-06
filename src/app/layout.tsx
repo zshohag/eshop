@@ -7,6 +7,7 @@ import { Providers as QueryProviders } from "@/providers/QueryProvider";
 import { Toaster } from "react-hot-toast";
 import ReduxProvider from "@/providers/ReduxProvider";
 import { ClientWrapper } from "@/components/ClientWrapper";
+import { ThemeProvider } from "@/components/Theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,15 +49,17 @@ export default function RootLayout({
   `}
         suppressHydrationWarning
       >
-        <NextAuthProvider>
-          <QueryProviders>
-            <ReduxProvider>
-              <Navbar />
-              <ClientWrapper>{children}</ClientWrapper>
-            </ReduxProvider>
-          </QueryProviders>
-        </NextAuthProvider>
-        <Toaster position="top-center" reverseOrder={false} />
+        <ThemeProvider attribute="class" defaultTheme="system">
+          <NextAuthProvider>
+            <QueryProviders>
+              <ReduxProvider>
+                <Navbar />
+                <ClientWrapper>{children}</ClientWrapper>
+              </ReduxProvider>
+            </QueryProviders>
+          </NextAuthProvider>
+          <Toaster position="top-center" reverseOrder={false} />
+        </ThemeProvider>
       </body>
     </html>
   );

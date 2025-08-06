@@ -4,7 +4,7 @@ import { MarqueeSlider } from "@/components/MarqueeSlider";
 
 export default function Home() {
   return (
-    <div>
+    <div className="" >
       <HomeSlider />
       <EcommerceCatalog />
       <MarqueeSlider />

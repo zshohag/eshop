@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-// import { Facebook,  Instagram  } from "lucide-react";
-// import { Button } from "@/components/ui/button";
+ import { Facebook,  Instagram  } from "lucide-react";
+ import { Button } from "@/components/ui/button";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-t ">
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    <footer className="bg-gray-100 text-gray-700 dark:text-gray-300 dark:border-gray-50/[.1] dark:bg-gray-50/[.10] border-t ">
+      {/* <footer className="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-t "> */}
+      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         {/* Logo + About */}
         <div>
           <div className="flex items-center gap-4 mb-2 ">
@@ -23,7 +24,9 @@ export function Footer() {
               /> */}
 
               {/* Title and Badge */}
-              <span className="text-xl font-bold text-gray-900">eshop</span>
+              <span className="text-xl font-bold text-gray-900 dark:text-white ">
+                eshop
+              </span>
             </Link>
           </div>
           <p className="text-sm">
@@ -67,14 +70,14 @@ export function Footer() {
             Contact
           </h3>
           <ul className="space-y-2 text-sm">
-            <li>Email: info@moshiurtamim.com</li>
-            <li>Phone: +1 (808) 720-6730</li>
-            <li>Location: Honolulu, HI</li>
+            <li>Email: info@zdshohag.com</li>
+            <li>Phone: +5 (000) 000-0000</li>
+            <li>Location: Dhaka, BD</li>
           </ul>
         </div>
 
         {/* Social Icons */}
-        {/* <div>
+     <div>
           <h3 className="text-lg font-semibold mb-3 text-gray-800 dark:text-white">Follow Us</h3>
           <div className="flex gap-4">
             <Button size="icon" variant="ghost" asChild>
@@ -88,7 +91,7 @@ export function Footer() {
               </Link>
             </Button>
           </div>
-        </div> */}
+        </div> 
       </div>
 
       <div className="border-t border-gray-300 dark:border-gray-700 py-4 text-center text-sm">

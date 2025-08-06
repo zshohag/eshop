@@ -15,8 +15,8 @@ export function CategorySidebar({
   onCategoryChange,
 }: CategorySidebarProps) {
   return (
-    <div className="w-80 bg-white rounded-xl shadow-lg p-6 h-fit sticky top-6">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6">Categories</h2>
+    <div className="w-80 bg-white rounded-xl shadow-lg p-6 h-fit sticky top-6 dark:bg-gray-50/[.10]">
+      <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">Categories</h2>
 
       <div className="space-y-3">
         <Button
