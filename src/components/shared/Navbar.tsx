@@ -415,7 +415,7 @@ export function Navbar() {
         "shadow-sm border-b sticky top-0 z-50 transition-all duration-300",
         isBlackNavbar
           ? "bg-white dark:border-gray-50/[.1] dark:bg-gray-50/[.10]  border-gray-200"
-          : "bg-black border-gray-800"
+          : "bg-[#3b3b3b] border-gray-200"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 py-3 sm:py-4">
