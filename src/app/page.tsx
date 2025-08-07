@@ -1,12 +1,12 @@
-import EcommerceCatalog from "@/components/EcommerceCatalogContent";
+import ProductArea from "@/components/Product-Area";
 import HomeSlider from "@/components/HomeSlider";
 import { MarqueeSlider } from "@/components/MarqueeSlider";
 
 export default function Home() {
   return (
-    <div className="" >
+    <div>
       <HomeSlider />
-      <EcommerceCatalog />
+      <ProductArea />
       <MarqueeSlider />
     </div>
   );

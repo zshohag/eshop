@@ -15,7 +15,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import { AppSidebar } from "@/components/Sidebar"
+import { AppSidebar } from "@/components/Dashboard-Sidebar"
 
 export default function DashboardLayout({
   children,

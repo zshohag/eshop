@@ -1,6 +1,6 @@
 "use client";
 
-import EcommerceCatalog from "@/components/EcommerceCatalogContent";
+import EcommerceCatalog from "@/components/Product-Area";
 import { Marquee } from "@/components/magicui/marquee";
 import { cn } from "@/lib/utils";
 import { Sparkles } from "lucide-react";

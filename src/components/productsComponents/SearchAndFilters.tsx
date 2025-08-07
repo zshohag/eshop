@@ -25,7 +25,7 @@ export function SearchAndFilters({
   const [showMobileFilters, setShowMobileFilters] = useState(false);
 
   return (
-    <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 mb-6 sm:mb-8 ">
+    <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 mb-6 sm:mb-8 dark:text-gray-300 dark:border-gray-50/[.1] dark:bg-gray-50/[.10]">
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-between mb-4 sm:mb-0">
         <SearchBar
           searchQuery={searchQuery}

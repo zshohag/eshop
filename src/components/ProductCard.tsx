@@ -60,14 +60,6 @@ export function ProductCard({ product, onViewDetails }: ProductCardProps) {
             </Badge>
           )}
 
-          {/* {!product.inStock && (
-            <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-              <Badge variant="destructive" className="text-lg px-4 py-2">
-                Out of Stock
-              </Badge>
-            </div>
-          )} */}
-          {/*  */}
           {(!product.inStock || product.badge === "Coming Soon") && (
             <div className="absolute inset-0 bg-black/50 flex items-center justify-center z-10">
               <Badge variant="destructive" className="text-lg px-4 py-2">
@@ -91,7 +83,7 @@ export function ProductCard({ product, onViewDetails }: ProductCardProps) {
             </h3>
           </div>
 
-          {/* <div className="flex items-center gap-1 mb-2">
+          <div className="flex items-center gap-1 mb-2">
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
@@ -105,7 +97,7 @@ export function ProductCard({ product, onViewDetails }: ProductCardProps) {
             <span className="text-sm text-gray-600 ml-1">
               ({product.reviews})
             </span>
-          </div> */}
+          </div>
 
           <p className="text-gray-600 text-sm mb-3 line-clamp-2">
             {product.description}
@@ -146,7 +138,11 @@ export function ProductCard({ product, onViewDetails }: ProductCardProps) {
             className="flex-1"
           >
             <ShoppingCart className="w-4 h-4 mr-2" />
-            Add to Cart
+            {product.badge === "Coming Soon"
+              ? "Coming Soon"
+              : !product.inStock
+              ? "Out of Stock"
+              : "Add to Cart"}
           </Button>
           <Button
             variant="outline"

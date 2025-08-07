@@ -9,7 +9,7 @@ import { CategorySidebar } from "./CategorySidebar";
 import { SearchAndFilters } from "./productsComponents/SearchAndFilters";
 import { ProductsGrid } from "./productsComponents/ProductsGrid";
 
-function EcommerceCatalogContent() {
+function ProductContent() {
   const { data: allProducts = [], isLoading: loading } = useProducts();
 
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -95,10 +95,10 @@ function EcommerceCatalogContent() {
   );
 }
 
-export default function EcommerceCatalog() {
+export default function ProductArea() {
   return (
-    <div  className="">
-      <EcommerceCatalogContent />
+    <div>
+      <ProductContent />
     </div>
   );
 }
