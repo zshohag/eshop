@@ -83,7 +83,7 @@ export default function CartPage() {
             </Button>
           </Link>
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">Shopping Cart</h1>
+            <h1 className=" font-sans text-3xl font-bold text-gray-900">Shopping Cart</h1>
             <p className="text-gray-600">{itemCount} item(s) in your cart</p>
           </div>
         </div>
@@ -123,7 +123,7 @@ export default function CartPage() {
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
-                          <h3 className="font-semibold text-lg text-gray-900">
+                          <h3 className=" font-sans font-semibold text-lg text-gray-900">
                             {item.name}
                           </h3>
 
